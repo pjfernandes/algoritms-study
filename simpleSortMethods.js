@@ -14,3 +14,25 @@ const bubbleSort = ((array) => {
   }
   return array;
 });
+///////////////////////////////////////////////////////////////
+const selectionSort = ((array) => {
+
+  for (let i = 0; i < array.length; i++) {
+
+    let minIndex = i;
+    let aux;
+
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] < array[minIndex]) {
+        minValue = array[j];
+        minIndex = j;
+      }
+    }
+
+    aux = array[i];
+    array[i] = minValue;
+    array[minIndex] = aux;
+  }
+
+  return array;
+});
