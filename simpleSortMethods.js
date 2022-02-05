@@ -17,22 +17,23 @@ const bubbleSort = ((array) => {
 ///////////////////////////////////////////////////////////////
 const selectionSort = ((array) => {
 
-  for (let i = 0; i < array.length; i++) {
-
-    let minIndex = i;
+  for (let j = 0; j < array.length; j++) {
+    let minIndex = j;
     let aux;
-
-    for (let j = i + 1; j < array.length; j++) {
-      if (array[j] < array[minIndex]) {
-        minValue = array[j];
-        minIndex = j;
+    for (let i = j + 1; i < array.length; i++) {
+      if (array[i] < array[minIndex]) {
+        minIndex = i;
       }
     }
 
-    aux = array[i];
-    array[i] = minValue;
+    aux = array[j];
+    array[j] = array[minIndex];
     array[minIndex] = aux;
   }
 
   return array;
+});
+////////////////////////////////////////////////////////////
+const insertionSort  = ((array) => {
+
 });
