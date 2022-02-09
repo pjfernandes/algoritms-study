@@ -34,10 +34,13 @@ class Queue {
   remove() {
     if (!this.isEmpty()) {
 
-      for (let i = 0; i < this.end - 1; i++) {
-        this.data[i] = this.data[i+1];
-      }
+      // for (let i = 0; i < this.end - 1; i++) {
+      //   this.data[i] = this.data[i+1];
+      // }
+      this.data.shift();
       this.end --;
+    } else {
+      return "Queue is already empty"
     }
 
   }
